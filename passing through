@@ -1,0 +1,10 @@
+while true do
+    local item = hero:findNearestItem()
+    if item then
+        if item.type != "gem" then
+            hero:moveXY(pet.pos.x, pet.pos.y)
+        else
+            hero:moveXY(item.pos.x, item.pos.y)
+        end
+    end
+end

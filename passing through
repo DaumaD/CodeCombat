@@ -1,3 +1,4 @@
+--couldn't make this work: != not functioning
 while true do
     local item = hero:findNearestItem()
     if item then

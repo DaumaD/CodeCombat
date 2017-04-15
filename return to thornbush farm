@@ -1,6 +1,6 @@
 -- LUA
 -- The function maybeBuildTrap defines TWO parameters!
-function maybeBuildTrap (x, y) 
+local maybeBuildTrap = function (x, y) 
     -- Use x and y as the coordinates to move to.
     self:moveXY(x, y)
     local enemy = self:findNearestEnemy()
@@ -19,4 +19,4 @@ while true do
     maybeBuildTrap(25, 34)
     -- Now use maybeBuildTrap at the bottom entrance!
     maybeBuildTrap(43, 20)
-end 
+end    

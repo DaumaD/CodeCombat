@@ -1,0 +1,22 @@
+-- LUA
+-- The function maybeBuildTrap defines TWO parameters!
+function maybeBuildTrap (x, y) 
+    -- Use x and y as the coordinates to move to.
+    self:moveXY(x, y)
+    local enemy = self:findNearestEnemy()
+    if enemy then
+        self:say("I should build!")
+        -- Use buildXY to build a "fire-trap" at the given x and y.
+        self:buildXY("fence", x, y)
+    end
+end
+
+while true do
+    -- This calls maybeBuildTrap, with the coordinates of the top entrance.
+    maybeBuildTrap(43, 50)
+    
+    -- Now use maybeBuildTrap at the left entrance!
+    maybeBuildTrap(25, 34)
+    -- Now use maybeBuildTrap at the bottom entrance!
+    maybeBuildTrap(43, 20)
+end 

@@ -1,3 +1,4 @@
+-- LUA
 while true do
     local enemy = hero:findNearestEnemy()
     local type = enemy.type

@@ -9,3 +9,17 @@ while true do
         end
     end
 end
+
+-- this works:
+while true do
+    local item = hero:findNearestItem()
+    if item then
+        local type=item.type
+        hero:say(type)
+        if type == "gem" then
+            hero:moveXY(item.pos.x, item.pos.y)
+        else
+            hero:moveXY(pet.pos.x, pet.pos.y)
+        end
+    end
+end

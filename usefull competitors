@@ -1,0 +1,17 @@
+while true do
+    local enemy = hero:findNearestEnemy()
+    local type = enemy.type
+    hero:say(type)
+    if enemy then
+        if enemy.type ~= "peon" then
+            hero:attack(enemy)
+        end
+    end
+    local item = hero:findNearestItem()
+    if item then
+        if item.type == "poison" then
+            else
+                hero:moveXY(item.pos.x, item.pos.y)
+        end
+    end
+end
